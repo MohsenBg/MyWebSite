@@ -11,4 +11,4 @@ Thank you ❤️ for watching my project.
 1-React.js <br/>
 2-Redux <br/>  
 3-TypeScript <br/>
-4-Sass <br/>
+4-Sass
