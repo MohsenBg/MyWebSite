@@ -1,0 +1,164 @@
+//fonts
+@import "../../../Fonts/Font.scss";
+
+
+//variables
+$NavColor: rgba(0, 0, 0, 0.5);
+$NavColorHover: rgba(250, 250, 250, 0.5);
+$NavBarColorText :rgb(255, 255, 255);
+
+
+//Mixin and function
+
+@mixin flex($locateX,$locateY,$direction) {
+    display: flex;
+    align-items: $locateX;
+    justify-content: $locateY;
+    flex-direction: $direction; 
+}
+
+
+//NavBar Sass
+.ContainerNavbar{   
+margin: 0;
+    position: relative;
+    z-index: 2; 
+    .NavBar{
+        background-color: $NavColor;
+        position: relative;
+        height: 9.9vh;
+        @media (max-width:450px) {
+            
+        }
+        
+        .MenuIcons{
+            z-index: 4;
+            position: absolute;
+            top: -100%;
+            opacity: 0%;
+            @media (max-width:450px) {
+                top: 2vh;
+                left:1em;
+                opacity: 100%;
+                font-size: 2em;
+                color: rgba(255, 255, 255, 0.781);
+            }
+        }
+        ul{
+            padding: 3vh;
+            position: absolute;
+            right:2em;
+            list-style-type: none;
+            
+            li{
+                margin-left: 4em;
+                display: inline;
+                a{
+                    color: $NavBarColorText;
+                    text-decoration: none;
+                    font-size: 1.1em;
+                    font-family: 'Lobster', cursive;
+                }
+                a:hover{
+                    color: rgba(252, 0, 0, 0.6);
+                }
+                 
+            }
+            .liMobileOpen,
+            .liMobileClose{
+                @media (max-width:450px) {
+                    position: relative;
+                    @include flex(start,start , row);
+                    opacity: 100%;
+                    margin-top: 1em;
+                } 
+            }
+        }
+        border-bottom: solid 1px rgba(160, 160, 160, 0.205);
+        .ulMobileOpen{
+            animation: ulBarMobileOpen  3s ease-in-out;
+            -moz-animation:ulBarMobileOpen  3s ease-in-out;
+            -webkit-animation:ulBarMobileOpen  3s ease-in-out;
+            @media (max-width:450px) {
+                left: -2.5em;
+                top: 2em; 
+                
+            } 
+        }
+        .ulMobileClose{
+            @media (max-width:450px) {
+            animation: ease-in-out ulBarMobileClose  2s ;
+            -moz-animation: ease-in-out ulBarMobileClose  2s;
+            -webkit-animation: ease-in-out ulBarMobileClose  2s;
+                left: -2.5em;           
+               opacity: 0;
+            } 
+        }
+    }  
+    .NavbarMobileOpen{
+        @media (max-width:450px) {
+            height: 14em;
+            animation: NavbarMobileOpen  1.5s ease-in-out;
+            -moz-animation: NavbarMobileOpen  1.5s ease-in-out;
+            -webkit-animation: NavbarMobileOpen  1.5s ease-in-out;
+        }
+    } 
+    .NavbarMobileClose{
+        @media (max-width:450px) {
+        animation: NavbarMobileClose  1.5s ease-in-out;
+        -moz-animation: NavbarMobileClose  1.5s ease-in-out;
+        -webkit-animation: NavbarMobileClose  1.5s ease-in-out;
+            height: 9.9vh;
+        }
+      
+    } 
+}
+
+@keyframes NavbarMobileOpen {
+    from{
+        height: 9.9vh ;
+    }
+    to{
+        height: 14em;
+    }
+}
+
+@keyframes NavbarMobileClose {
+    from{
+        height: 14em;
+    }
+    to{
+        height: 9.9vh;
+    }
+}
+
+
+
+@keyframes ulBarMobileOpen {
+    from{
+        opacity: 0%;
+        top: 0;
+    }
+    to{
+        opacity: 100%;
+        top: 2em;
+    }
+}
+
+
+@keyframes ulBarMobileClose {
+    0%{
+        opacity: 100%;
+        top: 2em;
+       
+    }
+
+    20%{
+        opacity: 0%;
+        
+    }
+    100%{
+        top: -100%;
+       
+    }
+}
