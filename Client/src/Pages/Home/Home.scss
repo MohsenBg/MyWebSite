@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center;
   z-index: 1;
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     background: url(../../Images/HomeImage/fCua1mz_d.webp);
     background-position: bottom;
     height: 100vh;
@@ -25,26 +25,45 @@
     top: 0;
     height: 80vh;
   }
-  .titleHomePage {
-    margin-left: 60px;
-    font-size: 3em;
-    font-family: "Special Elite", cursive;
-    color: rgba(253, 89, 89, 0.9);
-    @media (max-width:500px) {
-     font-size: 1.2em;  
-     position:absolute;
-    top: 12em;
-     margin-left: 0; 
-    }
-    @media  (min-width:501px) and (max-width:1336px) {
-      font-size: 3em;   
-      margin-left:0 ;
-     }
-     @media (min-width:1336px) and (max-width:1920px) {
-      font-size: 4em;   
-     }
 
+  .titleHomeDiv {
+    text-align: center;
+    width: 65%;
+    height: 250px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+    .titleHomePage {
+      font-size: 4em;
+      @media (max-width: 500px) {
+        font-size: 2em;
+      }
+      @media (min-width: 501px) and (max-width: 1336px) {
+        font-size: 4em;
+      }
+      @media (min-width: 1336px) and (max-width: 1920px) {
+        font-size: 5em;
+      }
+    }
   }
+
+  .titleHomeDiv b {
+    font: 400 19vh "Vibur";
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+      0 0 0.1em #ff4444, 0 10px 3px #000;
+  }
+  .titleHomeDiv b span {
+    animation: blink linear infinite 3s;
+  }
+  .titleHomeDiv b span:nth-of-type(2) {
+    animation: blink linear infinite 2s;
+  }
+
   .resume {
     @include flexCenter();
     position: absolute;
@@ -53,16 +72,16 @@
     cursor: pointer;
     top: 50%;
     margin-left: 18em;
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
       margin-left: 0;
-      top: 12em;   
-     }
-     @media  (min-width:501px) and (max-width:1336px) {
-      margin-left: 13em;  
-      }
-      @media (min-width:1336px) and (max-width:1920px) {
-        margin-left: 18em;  
-      }
+      top: 12em;
+    }
+    @media (min-width: 501px) and (max-width: 1336px) {
+      margin-left: 13em;
+    }
+    @media (min-width: 1336px) and (max-width: 1920px) {
+      margin-left: 18em;
+    }
   }
   .ButtonContact {
     @include flexCenter();
@@ -72,16 +91,70 @@
     margin-top: 5em;
     margin-right: 12em;
     top: 50%;
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
       margin-right: 0;
-      top: 16em;   
-     
-     }
-     @media  (min-width:501px) and (max-width:1336px) {
-      margin-left:0;  
-      }
-      @media (min-width:1336px) and (max-width:1920px) {
-        margin-left:0;   
-      }
+      top: 16em;
+    }
+    @media (min-width: 501px) and (max-width: 1336px) {
+      margin-left: 0;
+    }
+    @media (min-width: 1336px) and (max-width: 1920px) {
+      margin-left: 0;
+    }
+  }
+  .ContactMainDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  .animationContact {
+    animation: opacityZero 1s ease-in-out;
+    z-index: 3;
+  }
+}
+
+@import url(//fonts.googleapis.com/css?family=Vibur);
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+@keyframes opacityZero {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
   }
 }
