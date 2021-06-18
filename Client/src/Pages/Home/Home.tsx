@@ -1,4 +1,4 @@
-import React, { ReactChildren, useState } from "react";
+import React, { useState } from "react";
 import "./Home.scss";
 import Blue_button from "../../Components/extra_features/buttonResume/Blue_button";
 import Button_Contact from "../../Components/extra_features/buttonContact/button_Contact";
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
     setTimeout(() => {
       setContactStatus(false);
       SetStatusOfClassContact(false);
-    }, 1000);
+    }, 500);
   };
 
   console.log(statusOfClassContact);

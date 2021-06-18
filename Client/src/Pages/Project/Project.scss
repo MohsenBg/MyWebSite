@@ -1,0 +1,25 @@
+.ProjectContainer {
+  background-image: url(../../Images/AboutImage/backgroundProject.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  border-bottom: black 5px solid;
+  .MainProjectPage {
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .imgForme {
+      margin-top: 60px;
+      background-color: #ffffff8c;
+      height: 470px;
+      width: 800px;
+      border-radius: 20px;
+    }
+  }
+}
