@@ -2,24 +2,95 @@
   background-image: url(../../Images/AboutImage/backgroundProject.jpg);
   background-position: center;
   background-size: cover;
+  color: black;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 600px;
   border-bottom: black 5px solid;
+  .Filter {
+    background-color: rgba(253, 253, 253, 0.288);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+  }
   .MainProjectPage {
     height: 600px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .imgSizeForm {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      @media (min-width: 800px) {
+        width: 55%;
+      }
+      @media (min-width: 1300px) {
+        top: 25px;
+        width: 50%;
+      }
+      height: 600px;
+    }
     .imgForme {
-      margin-top: 60px;
-      background-color: #ffffff8c;
-      height: 470px;
-      width: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.616);
+      position: relative;
       border-radius: 20px;
+      width: 100%;
+      padding-bottom: 56.25%;
+      -webkit-box-shadow: 0px 0px 10px 0px #000000;
+      box-shadow: 0px 0px 10px 0px #000000;
+      .RightArrow {
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        top: 43%;
+        margin-right: 0.5em;
+        font-size: 2.5em;
+        cursor: pointer;
+      }
+      .LeftArrow {
+        z-index: 2;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        top: 43%;
+        margin-left: 0.5em;
+        font-size: 2.5em;
+      }
+      .dotIcons {
+        position: absolute;
+        top: 80%;
+        z-index: 2;
+        font-size: 2em;
+      }
+      .imageProjectSide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border-radius: 20px;
+      }
+      .sideImage {
+        opacity: 0;
+      }
+      .sideImageActive {
+        animation: opacity 1500ms;
+        opacity: 1;
+      }
     }
   }
 }
