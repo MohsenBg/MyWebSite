@@ -39,58 +39,169 @@
         width: 50%;
       }
       height: 600px;
-    }
-    .imgForme {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.616);
-      position: relative;
-      border-radius: 20px;
-      width: 100%;
-      padding-bottom: 56.25%;
-      -webkit-box-shadow: 0px 0px 10px 0px #000000;
-      box-shadow: 0px 0px 10px 0px #000000;
-      .RightArrow {
-        z-index: 2;
-        position: absolute;
-        right: 0;
-        top: 43%;
-        margin-right: 0.5em;
-        font-size: 2.5em;
-        cursor: pointer;
-      }
-      .LeftArrow {
-        z-index: 2;
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-        top: 43%;
-        margin-left: 0.5em;
-        font-size: 2.5em;
-      }
-      .dotIcons {
-        position: absolute;
-        top: 80%;
-        z-index: 2;
-        font-size: 2em;
-      }
-      .imageProjectSide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
+      .imgForme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.616);
+        position: relative;
         border-radius: 20px;
-      }
-      .sideImage {
-        opacity: 0;
-      }
-      .sideImageActive {
-        animation: opacity 1500ms;
-        opacity: 1;
+        width: 100%;
+        padding-bottom: 56.25%;
+        -webkit-box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #000000;
+        .RightArrow {
+          background-color: white;
+          display: flex;
+          border-radius: 100px;
+          z-index: 2;
+          position: absolute;
+          right: -1.1em;
+          top: 40%;
+          font-size: 2.5em;
+          cursor: pointer;
+          &:hover {
+            color: white;
+            background-color: black;
+          }
+          @media (max-width: 500px) {
+            font-size: 2em;
+            right: -1.2em;
+          }
+          @media (min-width: 1000px) {
+            font-size: 3em;
+            right: -1.2em;
+          }
+        }
+        .LeftArrow {
+          background-color: white;
+          display: flex;
+          border-radius: 100px;
+          z-index: 2;
+          cursor: pointer;
+          position: absolute;
+          left: -1.1em;
+          top: 40%;
+          font-size: 2.5em;
+          &:hover {
+            color: white;
+            background-color: black;
+          }
+          @media (max-width: 500px) {
+            font-size: 2em;
+            left: -1.2em;
+          }
+          @media (min-width: 1000px) {
+            font-size: 3em;
+            left: -1.2em;
+          }
+        }
+        .btnAutoImage {
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -khtml-user-select: none;
+          -ms-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+          position: absolute;
+          right: 10px;
+          z-index: 1;
+          top: -10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5em 0.6em 0.5em 0.6em;
+          font-size: 0.8em;
+          color: white;
+          &:hover {
+            animation: autoShowUp 700ms;
+            margin-top: -1.25em;
+            z-index: 1;
+            cursor: pointer;
+          }
+          &:not(:hover) {
+            animation: autoShowDown 700ms;
+          }
+        }
+        .btnAutoImageOn {
+          background-color: rgba(71, 230, 143, 0.445);
+        }
+        .btnAutoImageOff {
+          background-color: rgba(255, 60, 0, 0.466);
+        }
+        .imageProjectSide {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          border-radius: 20px;
+          opacity: 0;
+        }
+        .sideImage {
+          animation: hidden 800ms ease-in-out;
+        }
+        .sideImageActive {
+          animation: opacity 800ms ease-in-out;
+          z-index: 2;
+          opacity: 1;
+        }
       }
     }
+  }
+
+  .doteContainer {
+    background-color: rgba(127, 240, 255, 0.568);
+    position: absolute;
+    display: flex;
+    z-index: 4;
+    border-radius: 5px;
+    top: 100%;
+    margin-top: 1em;
+    .dote {
+      z-index: 4;
+      font-size: 1em;
+      color: white;
+      padding: 0.3em;
+      @media (max-width: 500px) {
+        padding: 0.1em;
+        font-size: 0.8em;
+      }
+      @media (min-width: 1000px) {
+        padding: 0.6em;
+        font-size: 1em;
+      }
+    }
+    .doteActive {
+      color: red;
+    }
+  }
+}
+
+@keyframes autoShowUp {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -1.25em;
+  }
+}
+
+@keyframes autoShowDown {
+  from {
+    margin-top: -1.25em;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes hidden {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 100%;
   }
 }
