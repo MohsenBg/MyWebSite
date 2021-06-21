@@ -61,9 +61,11 @@ $NavBarColorText: rgb(255, 255, 255);
           color: rgba(252, 0, 0, 0.6);
         }
       }
+
       .liMobileOpen,
       .liMobileClose {
         @media (max-width: 450px) {
+          display: none;
           position: relative;
           @include flex(start, start, row);
           opacity: 100%;
