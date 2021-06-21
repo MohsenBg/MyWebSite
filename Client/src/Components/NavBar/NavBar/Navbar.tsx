@@ -16,13 +16,15 @@ const Navbar: React.FC = () => {
         <div className="MenuIcons" onClick={() => setMenuMobile(!menuMobile)}>
           <AiIcons.AiOutlineMenu />
         </div>
-        <ul className={menuMobile ? "ulMobileOpen" : "ulMobileClose"}>
+        <ul className={menuMobile ? "ul ulMobileOpen" : "ul ulMobileClose"}>
           {NavItems.map((item) => (
             <li
-              className={menuMobile ? "liMobileOpen" : "liMobileClose"}
+              className={menuMobile ? "li liMobileOpen" : "li liMobileClose"}
               key={item.id}
             >
-              <a href={item.link}>{item.itemName}</a>
+              <a className="a" href={item.link}>
+                {item.itemName}
+              </a>
             </li>
           ))}
         </ul>
