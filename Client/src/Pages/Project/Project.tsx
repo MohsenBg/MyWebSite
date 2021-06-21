@@ -8,15 +8,15 @@ const Project: React.FC = () => {
   const [autoImageStatus, setAutoImageStatus] = useState<boolean>(true);
 
   useEffect(() => {
-    if (autoImageStatus) {
-      setTimeout(() => {
+    setTimeout(() => {
+      if (autoImageStatus) {
         if (Image.length > currentImage) {
           setCurrentImage(currentImage + 1);
         } else {
           setCurrentImage(1);
         }
-      }, 7000);
-    }
+      }
+    }, 4000);
   }, [currentImage, autoImageStatus]);
 
   const nextImage = () => {
@@ -92,6 +92,9 @@ const Project: React.FC = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="sectionTwoProject">
+          <h1>My project</h1>
         </div>
       </div>
     </div>

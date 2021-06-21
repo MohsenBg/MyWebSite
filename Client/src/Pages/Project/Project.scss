@@ -179,6 +179,18 @@
   }
 }
 
+.sectionTwoProject {
+  position: absolute;
+  top: 600px;
+  margin-top: 1em;
+  height: 700px;
+  h1 {
+    color: red;
+    font-family: cursive, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+}
+
 @keyframes autoShowUp {
   from {
     margin-top: 0;
