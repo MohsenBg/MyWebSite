@@ -2,13 +2,12 @@ name: Firebase CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -17,18 +16,18 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install -g npm
-    - name: npm install, build and test
-      run: |
-        npm install
-        npm build
-        - name: Archive Build
-        
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install -g npm
+      - name: npm install, build and test
+        run: |
+          npm install
+          npm build
+          - name: Archive Build
+
   deploy:
     name: Deploy
     needs: build
@@ -40,7 +39,7 @@ jobs:
         with:
           name: build
           path: build
-      - name: Depoy to Firebase
+      - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
