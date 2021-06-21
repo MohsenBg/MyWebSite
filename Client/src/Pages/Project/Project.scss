@@ -114,7 +114,10 @@
           font-size: 0.8em;
           color: white;
           &:hover {
-            animation: autoShowUp 700ms;
+            animation: autoShowUp 700ms ease-in-out;
+            -moz-animation: autoShowUp 700ms ease-in-out;
+            -webkit-animation: autoShowUp 700ms ease-in-out;
+            -o-animation: autoShowUp 700ms ease-in-out;
             margin-top: -1.25em;
             z-index: 1;
             cursor: pointer;
@@ -144,6 +147,9 @@
         }
         .sideImageActive {
           animation: opacity 800ms ease-in-out;
+          -moz-animation: opacity 800ms ease-in-out;
+          -webkit-animation: opacity 800ms ease-in-out;
+          -o-animation: opacity 800ms ease-in-out;
           z-index: 2;
           opacity: 1;
         }

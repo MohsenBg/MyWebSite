@@ -33,12 +33,11 @@ $NavBarColorText: rgb(255, 255, 255);
     .MenuIcons {
       z-index: 4;
       position: absolute;
-      top: -100%;
-      opacity: 0%;
+      display: none;
       @media (max-width: 450px) {
+        display: unset;
         top: 2vh;
         left: 1em;
-        opacity: 100%;
         font-size: 2em;
         color: rgba(255, 255, 255, 0.781);
       }
@@ -77,6 +76,7 @@ $NavBarColorText: rgb(255, 255, 255);
       animation: ulBarMobileOpen 1.5s ease-in-out;
       -moz-animation: ulBarMobileOpen 1.5s ease-in-out;
       -webkit-animation: ulBarMobileOpen 1.5s ease-in-out;
+      -o-animation: ulBarMobileOpen 1.5s ease-in-out;
       @media (max-width: 450px) {
         left: -2.5em;
         top: 2em;
@@ -87,8 +87,9 @@ $NavBarColorText: rgb(255, 255, 255);
         animation: ease-in-out ulBarMobileClose 1s;
         -moz-animation: ease-in-out ulBarMobileClose 1s;
         -webkit-animation: ease-in-out ulBarMobileClose 1s;
+        -o-animation: ease-in-out ulBarMobileClose 1s;
         left: -2.5em;
-        opacity: 0;
+        display: none;
       }
     }
   }
@@ -98,6 +99,7 @@ $NavBarColorText: rgb(255, 255, 255);
       animation: NavbarMobileOpen 1s ease-in-out;
       -moz-animation: NavbarMobileOpen 1s ease-in-out;
       -webkit-animation: NavbarMobileOpen 1s ease-in-out;
+      -o-animation: NavbarMobileOpen 1s ease-in-out;
     }
   }
   .NavbarMobileClose {
@@ -105,6 +107,7 @@ $NavBarColorText: rgb(255, 255, 255);
       animation: NavbarMobileClose 1s ease-in-out;
       -moz-animation: NavbarMobileClose 1s ease-in-out;
       -webkit-animation: NavbarMobileClose 1s ease-in-out;
+      -o-animation: NavbarMobileClose 1s ease-in-out;
       height: 9.9vh;
     }
   }
