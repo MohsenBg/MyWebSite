@@ -27,7 +27,7 @@ const Home: React.FC = () => {
       <div className="mainContainerDiv">
         <div className="titleHomeDiv">
           <b className="titleHomePage">
-            <span>L</span>et us Build your Websi<span>t</span>e
+            <span>L</span>et us Build your Websi<span>t</span>e!
           </b>
         </div>
         <div className="resume">
