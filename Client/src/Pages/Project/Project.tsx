@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Project.scss";
 import * as AiIcons from "react-icons/ai";
 import { Image } from "./ImageOfProject/ImageOfProject";
+import MyProject from "../../Components/ProjectComponent/MyProject/MyProject";
 
 const Project: React.FC = () => {
   const [currentImage, setCurrentImage] = useState<number>(1);
@@ -16,7 +17,7 @@ const Project: React.FC = () => {
           setCurrentImage(1);
         }
       }
-    }, 4000);
+    }, 5000);
   }, [currentImage, autoImageStatus]);
 
   const nextImage = () => {
@@ -95,6 +96,9 @@ const Project: React.FC = () => {
         </div>
         <div className="sectionTwoProject">
           <h1>My project</h1>
+          <div className="MyProjectComponent">
+            <MyProject />
+          </div>
         </div>
       </div>
     </div>

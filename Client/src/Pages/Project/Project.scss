@@ -1,5 +1,7 @@
 .ProjectContainer {
-  background-image: url(../../Images/AboutImage/backgroundProject.jpg);
+  margin: 0;
+  padding: 0;
+  background-image: url(../../Images/AboutImage/backgroundProject.webp);
   background-position: center;
   background-size: cover;
   color: black;
@@ -37,6 +39,14 @@
       @media (min-width: 1300px) {
         top: 25px;
         width: 50%;
+      }
+      @media (min-width: 1500px) {
+        top: 25px;
+        width: 40%;
+      }
+      @media (min-width: 1800px) {
+        top: 25px;
+        width: 35%;
       }
       height: 600px;
       .imgForme {
@@ -158,8 +168,8 @@
   }
 
   .doteContainer {
-    background-color: rgba(127, 240, 255, 0.568);
     position: absolute;
+    background-color: rgba(127, 240, 255, 0.568);
     display: flex;
     z-index: 4;
     border-radius: 5px;
@@ -186,15 +196,25 @@
 }
 
 .sectionTwoProject {
+  margin-top: 0;
   position: absolute;
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  width: 100%;
   top: 600px;
-  margin-top: 1em;
-  height: 700px;
+  height: auto;
   h1 {
+    margin-top: 1em;
     color: red;
     font-family: cursive, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
   }
+}
+
+.MyProjectComponent {
+  width: 100%;
+  margin-top: 1em;
+  left: 0;
 }
 
 @keyframes autoShowUp {

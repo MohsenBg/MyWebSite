@@ -1,10 +1,10 @@
 import { IconType } from "react-icons/lib";
-import image01 from "../../../Images/Project/ImageSideProject/Image01.png";
-import image02 from "../../../Images/Project/ImageSideProject/Image02.png";
-import image03 from "../../../Images/Project/ImageSideProject/Image03.png";
-import image04 from "../../../Images/Project/ImageSideProject/Image04.png";
-import image05 from "../../../Images/Project/ImageSideProject/Image05.png";
-import image06 from "../../../Images/Project/ImageSideProject/Image06.png";
+import image01 from "../../../Images/Project/ImageSideProject/Image01.webp";
+import image02 from "../../../Images/Project/ImageSideProject/Image02.webp";
+import image03 from "../../../Images/Project/ImageSideProject/Image03.webp";
+import image04 from "../../../Images/Project/ImageSideProject/Image04.webp";
+import image05 from "../../../Images/Project/ImageSideProject/Image05.webp";
+import image06 from "../../../Images/Project/ImageSideProject/Image06.webp";
 import * as GoIcons from "react-icons/go";
 
 interface img {
