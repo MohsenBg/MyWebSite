@@ -1,0 +1,495 @@
+$widthImageProfile: 350px;
+.AboutContainer {
+  .FillNavBar {
+    background-color: rgba(0, 0, 0, 0.623);
+    width: 100%;
+    height: 9.9vh;
+    @media (min-height: 1000px) {
+      height: 7vh;
+      font-size: 1.1em;
+    }
+  }
+  .AboutMainContainer {
+    .sectionOneAbout {
+      flex-direction: column;
+      position: relative;
+      background-color: rgba(0, 255, 255, 0.274);
+      width: 100%;
+      height: 250px;
+      border-bottom: 5px solid white;
+      @media (max-width: 670px) {
+        display: flex;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+      }
+      .textAboutPage {
+        margin-left: 1.5em;
+        @media (max-width: 670px) and (min-width: 240px) {
+          position: absolute;
+          margin: 0;
+          width: 90%;
+          margin-left: 5px;
+          margin-top: -18em;
+          left: 0;
+        }
+        h1 {
+          position: absolute;
+          margin-top: 0.5em;
+          color: #ffffff;
+          text-shadow: rgba(253, 29, 29, 0.596) 0px 0px 5px, #fff 0px 0px 10px,
+            #fff 0px 0px 15px, rgba(0, 255, 255, 0.274) 0px 0px 20px,
+            rgba(0, 255, 255, 0.274) 0px 0px 30px,
+            rgba(0, 255, 255, 0.274) 0px 0px 40px,
+            rgba(0, 255, 255, 0.274) 0px 0px 50px,
+            rgba(0, 255, 255, 0.274) 0px 0px 75px;
+          text-align: center;
+          @media (max-width: 670px) and (min-width: 240px) {
+            font-size: 1.5em;
+            position: relative;
+            margin-top: 0;
+            margin-left: 2em;
+          }
+          @media (min-width: 950px) {
+            font-size: 2.5em;
+            margin-top: 5px;
+          }
+        }
+        .PAboutPage {
+          position: absolute;
+          font-family: "Indie Flower", cursive;
+          font-weight: bold;
+          text-align: start;
+          width: 50%;
+          margin-top: 60px;
+
+          @media (min-width: 950px) {
+            font-size: 1.3em;
+          }
+          @media (min-width: 1340px) {
+            font-size: 1.4em;
+          }
+          @media (max-width: 670px) and (min-width: 240px) {
+            margin-top: 10px;
+            left: 5%;
+            text-align: center;
+            width: 100%;
+            font-size: 0.9em;
+          }
+        }
+      }
+      .ImageMe {
+        animation: rubberBand 1s;
+
+        -webkit-box-shadow: 0px 0px 10px 0px #000000;
+        box-shadow: 0px 0px 10px 0px #000000;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.527);
+        right: 0;
+        margin-top: 60px;
+        margin-right: 4em;
+        @media (min-width: 240px) and (max-width: 670px) {
+          margin: 0;
+          top: 200px;
+          width: 200px;
+          height: 200px * 1.25;
+          right: unset;
+        }
+        @media (min-width: 670px) and (max-width: 950px) {
+          width: 250px;
+          height: 250px * 1.25;
+        }
+        @media (min-width: 950px) {
+          width: $widthImageProfile;
+          height: $widthImageProfile * 1.25;
+        }
+        .profileImage {
+          top: 0;
+          left: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+        .StickIcon {
+          position: relative;
+          right: 160px;
+          color: rgba(247, 165, 14, 0.929);
+          z-index: 2;
+          top: -30px;
+          font-size: 5em;
+          @media (max-width: 670px) and (min-width: 240px) {
+            top: -30px;
+            right: 90px;
+          }
+          @media (min-width: 670px) and (max-width: 950px) {
+            top: -35px;
+            right: 115px;
+          }
+          @media (min-width: 950px) {
+            top: -30px;
+            right: 160px;
+          }
+        }
+      }
+    }
+    .SectionTwoAboutPage {
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(#9e768f, #9fa4c4);
+      .allBoxes {
+        margin-top: 180px;
+        position: relative;
+        @media (max-width: 670px) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          margin-top: 150px;
+          margin-bottom: 200px;
+        }
+        .titleAboutPage {
+          animation: rubberBand 1s;
+          color: white;
+          text-shadow: 1px 1px 0px #eb452b, 2px 2px 0px #efa032,
+            3px 3px 0px #46b59b, 4px 4px 0px #017e7f, 5px 5px 0px #052939;
+          font-size: 3em;
+          position: relative;
+          top: 20px;
+          font-family: "Kirang Haerang", cursive;
+          font-weight: bold;
+          text-align: center;
+          @media (max-width: 670px) {
+            margin-bottom: 30px;
+          }
+        }
+        .MySkillBox {
+          margin-top: 1em;
+          position: relative;
+          margin-bottom: 1em;
+          width: 100%;
+          @media (max-width: 670px) {
+            margin: 0;
+            margin-bottom: 1em;
+          }
+          .SkillBtn {
+            border: solid 2px white;
+            z-index: 2;
+            position: relative;
+            height: 200px;
+            width: 60px;
+            border-radius: 10px;
+            background-color: rgba(217, 255, 0, 0.452);
+            top: 0;
+            margin-left: 1em;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 5px;
+            @media (max-width: 670px) {
+              height: 250px;
+              width: 50px;
+            }
+            p {
+              font-size: 1.5em;
+              text-shadow: 1px 1px 0px #eb452b, 2px 2px 0px #efa032,
+                3px 3px 0px #46b59b, 4px 4px 0px #017e7f, 5px 5px 0px #052939;
+              font-family: cursive;
+              transform: rotate(-90deg);
+              -webkit-transform: rotate(-90deg);
+              -o-transform: rotate(-90deg);
+              -ms-transform: rotate(-90deg);
+              -moz-transform: rotate(-90deg);
+            }
+          }
+          .detailsSkills {
+            position: relative;
+            background-color: rgba(114, 250, 166, 0.61);
+            width: 80%;
+            border-radius: 0 10px 10px 0;
+            border: white solid 3px;
+            height: 180px;
+            margin-left: 1em;
+            margin-top: -11.84em;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 670px) {
+              margin-top: -245px;
+              height: 240px;
+              width: 450px;
+            }
+            .textOfSkill {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: auto;
+              text-align: start;
+              animation: OpacityAboutPage 2s ease-in-out;
+              -o-animation: OpacityAboutPage 2s ease-in-out;
+              -webkit-animation: OpacityAboutPage 2s ease-in-out;
+              -moz-animation: OpacityAboutPage 2s ease-in-out;
+              font-size: 0.7em;
+              margin: 15px 60px 0 60px;
+
+              @media (max-width: 670px) {
+                width: 200px;
+                margin-right: 20px;
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+              }
+
+              h3 {
+                font-family: cursive;
+                font-size: 1.4em;
+                margin-top: -10px;
+                line-height: 15px;
+                @media (min-width: 1020px) {
+                  font-size: 1.6em;
+                }
+              }
+              h5 {
+                color: white;
+                font: 1em sans-serif;
+                font-weight: bolder;
+                font-family: cursive;
+                margin-bottom: 5px;
+                @media (min-width: 1020px) {
+                  font-size: 1.2em;
+                }
+              }
+              p {
+                font-size: 1.1em;
+                @media (min-width: 1020px) {
+                  font-size: 1.3em;
+                }
+                font-weight: bold;
+                text-align: start;
+                margin-bottom: 5px;
+                font-family: cursive;
+              }
+            }
+            .textOfSkillRight {
+              margin-top: -15px;
+              transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+              -o-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              -moz-transform: rotate(180deg);
+              @media (max-width: 670px) {
+                margin-right: 20px;
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg);
+                -o-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                -moz-transform: rotate(-90deg);
+              }
+            }
+            .arrow {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              //border-left: solid white 2px;
+              height: 150px;
+              position: absolute;
+              right: -5px;
+              font-size: 3em;
+              text-align: end;
+              cursor: pointer;
+              &:hover {
+                color: white;
+              }
+            }
+            .arrowDisable {
+              animation: RotateBackArrowIcons 1s ease-in-out;
+              -moz-animation: RotateBackArrowIcons 1s ease-in-out;
+              -o-animation: RotateBackArrowIcons 1s ease-in-out;
+              -webkit-animation: RotateBackArrowIcons 1s ease-in-out;
+              transform: rotate(0deg);
+              -webkit-transform: rotate(0deg);
+              -o-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+              -moz-transform: rotate(0deg);
+            }
+            .arrowActive {
+              animation: RotateArrowIcons 1s ease-in-out;
+              -moz-animation: RotateArrowIcons 1s ease-in-out;
+              -o-animation: RotateArrowIcons 1s ease-in-out;
+              -webkit-animation: RotateArrowIcons 1s ease-in-out;
+              border: none;
+              transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+              -o-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              -moz-transform: rotate(180deg);
+            }
+          }
+
+          .detailsSkillsActive {
+            animation: OpenSkillDetails 1s ease-in-out;
+            -moz-animation: OpenSkillDetails 1s ease-in-out;
+            -o-animation: OpenSkillDetails 1s ease-in-out;
+            -webkit-animation: OpenSkillDetails 1s ease-in-out;
+            @media (max-width: 670px) {
+              animation: OpenSkillDetailsMobile 1s ease-in-out;
+              -moz-animation: OpenSkillDetailsMobile 1s ease-in-out;
+              -o-animation: OpenSkillDetailsMobile 1s ease-in-out;
+              -webkit-animation: OpenSkillDetailsMobile 1s ease-in-out;
+            }
+          }
+          .detailsSkillsDisable {
+            animation: CloseSkillDetails 1s ease-in-out;
+            -moz-animation: CloseSkillDetails 1s ease-in-out;
+            -o-animation: CloseSkillDetails 1s ease-in-out;
+            -webkit-animation: CloseSkillDetails 1s ease-in-out;
+            width: 100px;
+            @media (max-width: 670px) {
+              animation: CloseSkillDetailsMobile 1s ease-in-out;
+              -moz-animation: CloseSkillDetailsMobile 1s ease-in-out;
+              -o-animation: CloseSkillDetailsMobile 1s ease-in-out;
+              -webkit-animation: CloseSkillDetailsMobile 1s ease-in-out;
+            }
+            .textOfSkill {
+              position: absolute;
+              animation: FadeAboutPage 400ms ease-in-out, fadeOut 400ms;
+              // -moz-animation: FadeAboutPage 1ms ease-in-out;
+              // -o-animation: FadeAboutPage 1ms ease-in-out;
+              // -webkit-animation: FadeAboutPage 1ms ease-in-out;
+
+              left: -10000%;
+            }
+          }
+          @media (max-width: 670px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 200px;
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+          }
+        }
+        .BoxRight {
+          position: relative;
+          width: 100%;
+          margin-top: 3em;
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          right: 0;
+          @media (max-width: 670px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 200px;
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes OpenSkillDetails {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes OpenSkillDetailsMobile {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 450px;
+  }
+}
+
+@keyframes CloseSkillDetails {
+  from {
+    width: 80%;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes CloseSkillDetailsMobile {
+  from {
+    width: 450px;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes RotateArrowIcons {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+  }
+}
+
+@keyframes RotateBackArrowIcons {
+  from {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+}
+
+@keyframes OpacityAboutPage {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes FadeAboutPage {
+  0% {
+    left: unset;
+  }
+
+  100% {
+    left: unset;
+  }
+}
