@@ -201,7 +201,7 @@ $widthImageProfile: 350px;
               font-size: 1.5em;
               text-shadow: 1px 1px 0px #eb452b, 2px 2px 0px #efa032,
                 3px 3px 0px #46b59b, 4px 4px 0px #017e7f, 5px 5px 0px #052939;
-              font-family: cursive;
+              font-family: "Kirang Haerang", cursive;
               transform: rotate(-90deg);
               -webkit-transform: rotate(-90deg);
               -o-transform: rotate(-90deg);
@@ -253,7 +253,7 @@ $widthImageProfile: 350px;
               }
 
               h3 {
-                font-family: cursive;
+                font-family: "Kirang Haerang", cursive;
                 font-size: 1.4em;
                 margin-top: -10px;
                 line-height: 15px;
@@ -265,7 +265,7 @@ $widthImageProfile: 350px;
                 color: white;
                 font: 1em sans-serif;
                 font-weight: bolder;
-                font-family: cursive;
+                font-family: "Kirang Haerang", cursive;
                 margin-bottom: 5px;
                 @media (min-width: 1020px) {
                   font-size: 1.2em;
@@ -279,7 +279,7 @@ $widthImageProfile: 350px;
                 font-weight: bold;
                 text-align: start;
                 margin-bottom: 5px;
-                font-family: cursive;
+                font-family: "Kirang Haerang", cursive;
               }
             }
             .textOfSkillRight {
@@ -369,7 +369,7 @@ $widthImageProfile: 350px;
               // -o-animation: FadeAboutPage 1ms ease-in-out;
               // -webkit-animation: FadeAboutPage 1ms ease-in-out;
 
-              left: -10000%;
+              display: none;
             }
           }
           @media (max-width: 670px) {

@@ -80,7 +80,7 @@ const About: React.FC = () => {
         </div>
         <div className="SectionTwoAboutPage">
           <div className="allBoxes">
-            <h1 className="titleAboutPage">MySkill</h1>
+            <h1 className="titleAboutPage">MySkills</h1>
 
             <div className="MySkillBox">
               <div className="SkillBtn">
