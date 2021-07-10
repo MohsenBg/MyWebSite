@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./Contact.scss";
 import * as AiIcons from "react-icons/ai";
 import { IconsSocial } from "./Social_Icons";

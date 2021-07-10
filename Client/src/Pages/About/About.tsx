@@ -8,8 +8,6 @@ const About: React.FC = () => {
   //React
   const [statusOfSkillPanelReact, setStatusOfSkillPanelReact] =
     useState<Boolean>(true);
-  const [statusOfSkillAnimeReact, setStatusOfSkillAnimeReact] =
-    useState<Boolean>(true);
 
   //Redux
   const [statusOfSkillPanelRedux, setStatusOfSkillPanelRedux] =

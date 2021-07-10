@@ -15,8 +15,6 @@ interface props {
 }
 
 const App: React.FC<props> = (loadingStatus) => {
-  console.log(loadingStatus.loadingStatus);
-
   return (
     <div className="App">
       <Router>

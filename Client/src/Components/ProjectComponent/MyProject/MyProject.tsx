@@ -39,6 +39,7 @@ const MyProject = () => {
             {ImageProject01.map((img) => (
               <div key={img.id}>
                 <img
+                  alt="Image"
                   src={img.ImageSrc}
                   className={
                     currentImageP01 === img.id
@@ -171,6 +172,7 @@ const MyProject = () => {
             {ImageProject02.map((img) => (
               <div key={img.id}>
                 <img
+                  alt="ImageProject"
                   src={img.ImageSrc}
                   className={
                     currentImageP02 === img.id

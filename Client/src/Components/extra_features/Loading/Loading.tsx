@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { connect, MapDispatchToProps } from "react-redux";
+import React from "react";
+import { connect } from "react-redux";
 import LoadingImage from "../../../Images/LoadingImage/Loading.gif";
 import "./Loading.scss";
 import { ActionType } from "../../../Redux/Loading/ActionType/LoadingActionType";

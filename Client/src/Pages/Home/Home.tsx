@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Home.scss";
-import Blue_button from "../../Components/extra_features/buttonResume/Blue_button";
+import Blue_Button from "../../Components/extra_features/buttonResume/Blue_button";
 import Button_Contact from "../../Components/extra_features/buttonContact/button_Contact";
 import Contact from "../../Components/Contact/Contact";
 
@@ -21,7 +21,6 @@ const Home: React.FC = () => {
     }, 500);
   };
 
-  console.log(statusOfClassContact);
   return (
     <div className="containerHome">
       <div className="mainContainerDiv">
@@ -31,7 +30,7 @@ const Home: React.FC = () => {
           </b>
         </div>
         <div className="resume">
-          <Blue_button />
+          <Blue_Button />
         </div>
         <div className="ButtonContact" onClick={() => ContactOnClick()}>
           <Button_Contact />
