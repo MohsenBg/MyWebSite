@@ -1,46 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./About.scss";
 import profileImage from "../../Images/AboutImage/profileMohsenLow.webp";
 import * as GiIcons from "react-icons/gi";
 import * as IoIcons from "react-icons/io";
+import { AboutItem } from "../../Items/About/AboutItems";
 
 const About: React.FC = () => {
-  //React
-  const [statusOfSkillPanelReact, setStatusOfSkillPanelReact] =
-    useState<Boolean>(true);
+  const [AboutItems, setAboutItems] = useState(AboutItem);
 
-  //Redux
-  const [statusOfSkillPanelRedux, setStatusOfSkillPanelRedux] =
-    useState<Boolean>(true);
-
-  //Html/css3
-  const [statusOfSkillPanelHtml5Css3, setStatusOfSkillPanelHtml5Css3] =
-    useState<Boolean>(true);
-
-  //javaScript
-  const [statusOfSkillPanelJavaScript, setStatusOfSkillPanelJavaScript] =
-    useState<Boolean>(true);
-
-  //TypeScript
-  const [statusOfSkillPanelTypeScript, setStatusOfSkillPanelTypeScript] =
-    useState<Boolean>(true);
-
-  //sass
-  const [statusOfSkillPanelSass, setStatusOfSkillPanelSass] =
-    useState<Boolean>(true);
-
-  //Mysql
-  const [statusOfSkillPanelMySql, setStatusOfSkillPanelMySql] =
-    useState<Boolean>(true);
-
-  //mongoDb
-  const [statusOfSkillPanelMongoDb, setStatusOfSkillPanelMongoDb] =
-    useState<Boolean>(true);
-
-  //React
-
-  const ReactOnClick = () => {
-    setStatusOfSkillPanelReact(!statusOfSkillPanelReact);
+  const openStatusPanel = (id: number) => {
+    let newAboutItems = AboutItems;
+    let newOpen = AboutItems[id - 1].open;
+    newAboutItems[id - 1].open = !newOpen;
+    setAboutItems(newAboutItems);
+    console.log(AboutItems);
   };
 
   return (
@@ -79,307 +52,53 @@ const About: React.FC = () => {
         <div className="SectionTwoAboutPage">
           <div className="allBoxes">
             <h1 className="titleAboutPage">MySkills</h1>
-
-            <div className="MySkillBox">
-              <div className="SkillBtn">
-                <p>React</p>
-              </div>
-
-              <div
-                className={
-                  statusOfSkillPanelReact
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill">
-                  <h3>what I know about React</h3>
-
-                  <h5>ClassComponent</h5>
-                  <p>
-                    Rendering Elements , Components and Props , State and
-                    Lifecycle,Handling Events, State and Lifecycle, Conditional
-                    Rendering,Lists and Keys
-                  </p>
-                  <h5>Functional Component (Hooks)</h5>
-                  <p>
-                    Rendering Elements , Components and Props , State and
-                    Lifecycle,Handling Events, State and Lifecycle, Conditional
-                    Rendering,Lists and Keys,Using the Effect Hook,Rules of
-                    Hooks
-                  </p>
-                </div>
+            {AboutItems.map((item) => {
+              return (
                 <div
+                  key={item.id}
                   className={
-                    statusOfSkillPanelReact
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() => ReactOnClick()}
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox BoxRight">
-              <div className="SkillBtn">
-                <p>Redux</p>
-              </div>
-
-              <div
-                className={
-                  statusOfSkillPanelRedux
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill textOfSkillRight">
-                  <h3>what I know about Redux</h3>
-
-                  <h5>Redux</h5>
-                  <p>
-                    Action(type and payload), Reducer + State , dispatchStore,
-                    actionType debug redux, connection with hook like
-                    useDispatch and useState and classComponent or hook use
-                    connection and dispatch or State to props.
-                  </p>
-                </div>
-                <div
-                  className={
-                    statusOfSkillPanelRedux
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelRedux(!statusOfSkillPanelRedux)
+                    item.id % 2 == 0 ? "MySkillBox" : "MySkillBox BoxRight"
                   }
                 >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox">
-              <div className="SkillBtn">
-                <p>Html5/Css3</p>
-              </div>
+                  <div className="SkillBtn">
+                    <p>{item.MainTitle}</p>
+                  </div>
 
-              <div
-                className={
-                  statusOfSkillPanelHtml5Css3
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill">
-                  <h3>what I know about Html5/css3</h3>
+                  <div
+                    className={
+                      item.open
+                        ? "detailsSkills detailsSkillsActive"
+                        : "detailsSkills detailsSkillsDisable"
+                    }
+                  >
+                    <div
+                      className={
+                        item.id % 2 == 0
+                          ? "textOfSkill"
+                          : "textOfSkill textOfSkillRight"
+                      }
+                    >
+                      <h3>{item.Title2}</h3>
 
-                  <h5>Html5</h5>
-                  <p>
-                    not all tags but many of tags , add script and style in html
-                    but not recommended, meta and ...
-                  </p>
-                  <h5>css3</h5>
-                  <p>
-                    flex box, grid , border, padding , object , position like
-                    absolute relative fix sticky and ... ,adding Style to text
-                    or div and img or ... ,svg , transition and animation
-                    (keyframes and ... ).
-                  </p>
+                      <h5>{item.Title3}</h5>
+                      <p>{item.paragraph1}</p>
+                      {item.Title4 !== undefined && <h5>{item.Title3}</h5>}
+                      {item.paragraph2 !== undefined && (
+                        <p>{item.paragraph2}</p>
+                      )}
+                    </div>
+                    <div
+                      className={
+                        item.open ? "arrow arrowActive" : "arrow arrowDisable"
+                      }
+                      onClick={() => openStatusPanel(item.id)}
+                    >
+                      <IoIcons.IoMdArrowDropright />
+                    </div>
+                  </div>
                 </div>
-                <div
-                  className={
-                    statusOfSkillPanelHtml5Css3
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelHtml5Css3(!statusOfSkillPanelHtml5Css3)
-                  }
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox BoxRight">
-              <div className="SkillBtn">
-                <p>JavaScript</p>
-              </div>
-              <div
-                className={
-                  statusOfSkillPanelJavaScript
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill textOfSkillRight">
-                  <h3>what I know about JavaScript</h3>
-                  <h5>JavaScript</h5>
-                  <p>
-                    basic of programing language Like loop while Condition like
-                    if and switch ... ,ECM6 , important function like map filter
-                    ... and event handler like onclick ...,access to dom or html
-                    add element and more ...
-                  </p>
-                </div>
-                <div
-                  className={
-                    statusOfSkillPanelJavaScript
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelJavaScript(
-                      !statusOfSkillPanelJavaScript
-                    )
-                  }
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox">
-              <div className="SkillBtn">
-                <p>TypeScript</p>
-              </div>
-              <div
-                className={
-                  statusOfSkillPanelTypeScript
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill ">
-                  <h3>what I know about TypeScript</h3>
-                  <h5>TypeScript</h5>
-                  <p>
-                    defined type like react ClassComponent or hook and redux and
-                    type of most function and event handler , make interface or
-                    class
-                  </p>
-                </div>
-                <div
-                  className={
-                    statusOfSkillPanelTypeScript
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelTypeScript(
-                      !statusOfSkillPanelTypeScript
-                    )
-                  }
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox BoxRight">
-              <div className="SkillBtn">
-                <p>Sass</p>
-              </div>
-              <div
-                className={
-                  statusOfSkillPanelSass
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill textOfSkillRight">
-                  <h3>what I know about Sass</h3>
-
-                  <p>
-                    function , mixin , partials , Condition , variables ,nest
-                    make loop and so many futures ...
-                  </p>
-                </div>
-                <div
-                  className={
-                    statusOfSkillPanelSass
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelSass(!statusOfSkillPanelSass)
-                  }
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox">
-              <div className="SkillBtn">
-                <p>MySql</p>
-              </div>
-
-              <div
-                className={
-                  statusOfSkillPanelMySql
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill ">
-                  <h3>what I know about Mysql</h3>
-
-                  <h5>MySql</h5>
-                  <p>
-                    not much know only basic like make date base schema make
-                    post pull or delete and get with express and sql and also
-                    know basic of query like change table or join table delete
-                    it add colum and ...
-                  </p>
-                </div>
-                <div
-                  className={
-                    statusOfSkillPanelMySql
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelMySql(!statusOfSkillPanelMySql)
-                  }
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
-            <div className="MySkillBox BoxRight">
-              <div className="SkillBtn">
-                <p>MongoDb</p>
-              </div>
-              <div
-                className={
-                  statusOfSkillPanelMongoDb
-                    ? "detailsSkills detailsSkillsActive"
-                    : "detailsSkills detailsSkillsDisable"
-                }
-              >
-                <div className="textOfSkill textOfSkillRight">
-                  <h3>what I know about MongoDb</h3>
-
-                  <h5>MongoDb</h5>
-                  <p>
-                    know only basic mongo work with atlas and make date base
-                    schema document know json make post pull or delete and get
-                    with express and axios and also know some function og mongo
-                    like save or findById and.. it add colum and ..., make
-                    router
-                  </p>
-                </div>
-                <div
-                  className={
-                    statusOfSkillPanelMongoDb
-                      ? "arrow arrowActive"
-                      : "arrow arrowDisable"
-                  }
-                  onClick={() =>
-                    setStatusOfSkillPanelMongoDb(!statusOfSkillPanelMongoDb)
-                  }
-                >
-                  <IoIcons.IoMdArrowDropright />
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
