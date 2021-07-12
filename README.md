@@ -9,6 +9,6 @@ Thank you ❤️ for watching my project.
 ## tools 🧰
 
 1-React.js <br/>
-2-Redux
+2-Redux <br/>
 3-TypeScript <br/>
 4-Sass
