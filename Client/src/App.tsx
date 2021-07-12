@@ -9,6 +9,7 @@ import Project from "./Pages/Project/Project";
 import { initialState } from "./Redux/Store/Store";
 import Loading from "./Components/extra_features/Loading/Loading";
 import { connect } from "react-redux";
+import Footer from "./Components/Footer/Footer";
 
 interface props {
   loadingStatus: any;

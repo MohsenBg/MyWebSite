@@ -61,7 +61,6 @@ export const AboutItem: Array<Items> = [
       "defined type like react ClassComponent or hook and redux and type of most function and event handler , make interface or class",
     open: true,
   },
-
   {
     id: 6,
     MainTitle: "Sass",
