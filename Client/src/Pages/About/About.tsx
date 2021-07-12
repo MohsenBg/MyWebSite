@@ -4,6 +4,7 @@ import profileImage from "../../Images/AboutImage/profileMohsenLow.webp";
 import * as GiIcons from "react-icons/gi";
 import { AboutItem } from "../../Items/About/AboutItems";
 import UpdatingMapAbout from "./UpdatingMapAbout";
+import Footer from "../../Components/Footer/Footer";
 
 const About: React.FC = () => {
   const [AboutItems, setAboutItems] = useState(AboutItem);
@@ -45,6 +46,9 @@ const About: React.FC = () => {
           <div className="allBoxes">
             <h1 className="titleAboutPage">MySkills</h1>
             <UpdatingMapAbout items={AboutItems} />
+          </div>
+          <div>
+            <Footer />
           </div>
         </div>
       </div>
