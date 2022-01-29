@@ -1,333 +1,218 @@
-.MyProjectsContainer {
+.projects {
+  margin: 4em 0;
   display: flex;
-  width: 100%;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: auto;
-  margin-bottom: 3em;
-  z-index: 10;
-  .MyProjectContainer {
-    margin: 2em 1em;
-    position: relative;
-    box-shadow: 0 15px 30px 1px grey;
-    background: rgba(255, 255, 255, 0.9);
-    display: flex;
-    align-items: center;
+  .project {
+    background-color: aliceblue;
     width: 600px;
-    height: 240px;
+    height: 250px;
+    margin: 1em;
     @media (max-width: 650px) {
-      align-items: unset;
-      width: 240px;
-      height: 500px;
+      width: 250px;
+      height: 600px;
     }
-    .ImageMyProjectForm {
-      width: 40%;
+    .card {
+      width: 100%;
+      height: 100%;
+      display: flex;
       @media (max-width: 650px) {
-        width: 240px;
+        flex-direction: column;
       }
-      .ImagesMyProject {
-        position: relative;
-        background-color: rgba(8, 8, 8, 0.3);
-        width: 100%;
-        padding-top: 100%;
-
-        .ImageMyProject {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          animation: hidden 1s ease-in-out;
-          opacity: 0;
-        }
-        .ImageMyProjectActive {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          animation: opacity 1s ease-in-out;
-          opacity: 1;
-        }
-        .doteImage {
-          margin: 0 2px;
-          position: relative;
-          z-index: 2;
-          font-size: 1.2em;
-        }
-      }
-      .doteMyProject {
-        margin-top: -2em;
+      .image {
         z-index: 2;
-        background-color: rgba(0, 255, 255, 0.459);
-        padding: 0 20px;
-        position: absolute;
-        left: 30%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(103, 105, 105);
+        width: 240px;
+        height: 100%;
+        overflow: hidden;
+        @media (max-width: 650px) {
+          height: 240px;
+          width: 100%;
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          animation: fadeIn 1s;
+          background-position: center;
+        }
+        .dots {
+          position: absolute;
+          bottom: 10px;
+          display: flex;
+          background-color: rgba(0, 255, 255, 0.719);
+          border-radius: 8px;
+          padding: 2px 20px;
+          .dot {
+            font-size: 20px;
+            margin-top: 0.1em;
+          }
+        }
+      }
+      .dataSection {
+        position: relative;
+        width: 360px;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: black;
-        border-radius: 10px;
-      }
-      .doteMyProjectP {
-        left: 22%;
-      }
-      .doteImageActive {
-        margin: 0 2px;
-        position: relative;
-        z-index: 2;
-        font-size: 1.2em;
-        color: white;
-      }
-      .buttonsOfProject {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        .btnTec {
-          position: absolute;
-          z-index: 0;
-          background-color: rgb(157, 235, 127);
-          width: 100px;
-          font-size: 1.2em;
-          font-family: cursive;
-          color: rgb(0, 162, 255);
-          padding: 0.2em 0;
-          border-radius: 5px;
-          cursor: pointer;
-          animation: BackRight 1s ease-in-out;
-          @media (max-width: 650px) {
-            z-index: 0;
-            padding-top: 0.8em;
-            height: 35px;
-            width: 70px;
-            top: 220px;
-            font-size: 1em;
-            right: 145px;
-            margin: 0;
-            margin-top: -0.2em;
-          }
-        }
-        .TecActive {
-          position: absolute;
-          z-index: 0;
-          background-color: rgb(127, 232, 235);
-          width: 100px;
-          font-size: 1.2em;
-          font-family: cursive;
-          color: rgb(214, 18, 18);
-          padding: 0.2em 0;
-          border-radius: 5px;
-          animation: MoveRightDesktop 500ms ease-in-out;
-          margin-left: 0.8em;
-          cursor: pointer;
-          @media (max-width: 650px) {
-            animation: MoveDownMobile 500ms ease-in-out;
-            z-index: 0;
-            padding-top: 0.5em;
-            height: 45px;
-            width: 70px;
-            top: 220px;
-            font-size: 1em;
-            right: 145px;
-            margin: 0;
-            margin-top: 0.45em;
-          }
-        }
-        .btnAbout {
-          cursor: pointer;
-          margin-top: 2.5em;
-          position: absolute;
-          z-index: 0;
-          background-color: rgb(157, 235, 127);
-          width: 100px;
-          font-size: 1.2em;
-          font-family: cursive;
-          color: rgb(0, 162, 255);
-          padding: 0.2em 0;
-          margin-left: 0;
-          border-radius: 5px;
-          @media (max-width: 650px) {
-            z-index: 0;
-            padding-top: 0.8em;
-            height: 35px;
-            width: 70px;
-            top: 220px;
-            font-size: 1em;
-            right: 65px;
-            margin: 0;
-            margin-top: -0.2em;
-          }
-        }
-        .AboutActive {
-          position: absolute;
-          z-index: 0;
-          background-color: rgb(127, 232, 235);
-          width: 100px;
-          font-size: 1.2em;
-          font-family: cursive;
-          color: rgb(214, 18, 18);
-          padding: 0.2em 0;
-          border-radius: 5px;
-          margin-top: 2.5em;
-          animation: MoveRightDesktop 500ms ease-in-out;
-          margin-left: 0.8em;
-          cursor: pointer;
-          @media (max-width: 650px) {
-            animation: MoveDownMobile 500ms ease-in-out;
-            z-index: 0;
-            padding-top: 0.5em;
-            height: 45px;
-            width: 70px;
-            top: 220px;
-            font-size: 1em;
-            right: 65px;
-            margin: 0;
-            margin-top: 0.45em;
-          }
-        }
-        .btnLink {
-          margin-top: 5em;
-          position: absolute;
-          z-index: 0;
-          background-color: rgb(157, 235, 127);
-          width: 100px;
-          font-size: 1.2em;
-          font-family: cursive;
-          color: rgb(0, 162, 255);
-          padding: 0.2em 0;
-          border-radius: 5px;
-          cursor: pointer;
-          @media (max-width: 650px) {
-            z-index: 0;
-            padding-top: 0.8em;
-            height: 35px;
-            width: 70px;
-            top: 220px;
-            font-size: 1em;
-            right: -15px;
-            margin: 0;
-            margin-top: -0.2em;
-          }
-        }
-        .LinkActive {
-          position: absolute;
-          z-index: 0;
-          background-color: rgb(127, 232, 235);
-          width: 100px;
-          margin-top: 5em;
-          font-size: 1.2em;
-          font-family: cursive;
-          color: rgb(214, 18, 18);
-          padding: 0.2em 0;
-          border-radius: 5px;
-          animation: MoveRightDesktop 500ms ease-in-out;
-          margin-left: 0.8em;
-          cursor: pointer;
-          @media (max-width: 650px) {
-            animation: MoveDownMobile 500ms ease-in-out;
-            z-index: 0;
-            padding-top: 0.5em;
-            height: 45px;
-            width: 70px;
-            top: 220px;
-            font-size: 1em;
-            right: -15px;
-            margin: 0;
-            margin-top: 0.45em;
-          }
-        }
-      }
-    }
-    .tec {
-      margin-top: 1em;
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 1em;
-      position: absolute;
-      right: 0;
-      top: 0;
-      @media (max-width: 650px) {
-        top: 270px;
-        left: -35px;
-      }
-
-      text-align: start;
-      .titleTec {
-        margin-left: 1em;
-        font-size: 1.5em;
-        position: relative;
-        margin-top: 0.2em;
-        font-family: "Courier New", Courier, monospace;
-        color: black;
-        font-family: "Anton", sans-serif;
-      }
-      .AboutProject {
-        margin-left: 2em;
-        width: 250px;
-        font-family: "Indie Flower", cursive;
-        font-size: 1.1em;
-        font-weight: bold;
         @media (max-width: 650px) {
-          width: 220px;
-          font-size: 1em;
-          margin-right: 20px;
+          height: 300px;
+          width: 100%;
         }
-      }
-      .olTec {
-        position: relative;
-        margin-top: 0.5em;
-        color: black;
-        font-size: 1.1em;
-        font-family: "Staatliches", cursive;
-        .liTec {
-          margin-top: 0.5em;
-          margin-left: 2.5em;
-          display: inline-flex;
+
+        .btn {
+          z-index: 0;
+          background-color: rgb(157, 235, 127);
           width: 100px;
-        }
-        .iconRedux {
-          margin-left: 0.5em;
-          display: inline;
-        }
-      }
-      .LinkProject {
-        color: black;
-        margin-left: 0.4em;
-        font-size: 4em;
-        text-decoration: none;
-        span {
-          margin-left: -0.2em;
-          margin-top: -0.7em;
-          display: block;
+          font-size: 1.2em;
           font-family: cursive;
-          font-size: 0.4em;
+          color: rgb(0, 162, 255);
+          padding: 0.2em 0;
+          border-radius: 5px;
+          position: absolute;
+          left: -20px;
+          cursor: pointer;
+          @media (max-width: 650px) {
+            transform: rotate(90deg);
+            top: 0;
+            left: unset;
+          }
+        }
+        .About {
+          top: 10px;
+          @media (max-width: 650px) {
+            top: 10px;
+            left: 0;
+          }
+        }
+        .Tec {
+          top: 60px;
+          @media (max-width: 650px) {
+            top: 10px;
+            left: 50px;
+          }
+        }
+        .Link {
+          top: 110px;
+          @media (max-width: 650px) {
+            top: 10px;
+            left: 100px;
+          }
+        }
+        .btnActive {
+          background-color: rgb(0, 162, 255);
+          color: rgb(157, 235, 127);
+          @media (min-width: 650px) {
+            animation: moveLeft 500ms;
+            left: -5px;
+          }
+          @media (max-width: 650px) {
+            animation: moveTop 500ms;
+            top: 25px;
+          }
+        }
+        .safeData {
+          margin-left: 110px;
+          margin-right: 10px;
+          width: 240px;
+          height: 100%;
+          padding: 5px 2px;
+          @media (max-width: 650px) {
+            margin: 0 10px;
+            margin-top: 120px;
+            height: 240px;
+            width: 100%;
+          }
+          .title {
+            font-size: 1.5em;
+            position: relative;
+            margin-top: 0.2em;
+            font-family: "Courier New", Courier, monospace;
+            color: black;
+            font-family: "Anton", sans-serif;
+          }
+          .body {
+            margin-top: 1em;
+            font-family: "Indie Flower", cursive;
+            font-size: 1.1em;
+            font-weight: bold;
+          }
+          .TecSection {
+            font-family: "Staatliches", cursive;
+            .tecs {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              flex-wrap: wrap;
+              .tec {
+                margin-top: 1em;
+                justify-self: flex-end;
+                // margin-right: 0.6em;
+                display: flex;
+                width: 100px;
+              }
+              .tecLogo {
+                margin-left: 0.5em;
+              }
+            }
+          }
+          .LinkSection {
+            height: 70%;
+            .links {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 100%;
+              a {
+                cursor: pointer;
+                color: unset;
+                text-decoration: none;
+              }
+              .link {
+                margin: 0 1em;
+                font-family: "Staatliches", cursive;
+                .linkName {
+                  font-size: 18px;
+                }
+                .linkLogo {
+                  font-size: 35px;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
-@keyframes MoveRightDesktop {
+@keyframes fadeIn {
   from {
-    margin-left: 0;
+    opacity: 0;
   }
   to {
-    margin-left: 0.8em;
+    opacity: 1;
   }
 }
-
-@keyframes MoveDownMobile {
+@keyframes moveLeft {
   from {
-    margin-top: -0.2em;
-    height: 35px;
+    left: -20px;
   }
   to {
-    height: 45px;
-    margin-top: 0.45em;
+    left: -5px;
+  }
+}
+@keyframes moveTop {
+  from {
+    top: 10px;
+  }
+  to {
+    top: 25px;
   }
 }

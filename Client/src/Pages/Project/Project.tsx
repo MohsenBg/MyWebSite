@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Project.scss";
 import * as AiIcons from "react-icons/ai";
 import { Image } from "./ImageOfProject/ImageOfProject";
-import MyProject from "../../Components/ProjectComponent/MyProject/MyProject";
+import MyProject from "../../Components/ProjectComponent/MyProject/MyProjects";
 
 const Project: React.FC = () => {
   const [currentImage, setCurrentImage] = useState<number>(1);
@@ -43,7 +43,6 @@ const Project: React.FC = () => {
       setAutoImageStatus(!autoImageStatus);
     }
   };
-
   return (
     <div className="ProjectContainer">
       <div className="Filter" />
